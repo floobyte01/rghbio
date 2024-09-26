@@ -6,14 +6,13 @@ const Hero2 = () => {
       <div class="md:px-36 px-8 md:py-28 py-5">
         <div class="flex lg:flex-row flex-col grid-cols-2 gap-10">
           <div class="flex flex-col gap-5 justify-center p-5">
-            <h1 class="text-4xl md:text-5xl font-bold">Explore</h1>
-            <h1 class="text-4xl md:text-5xl font-bold">the Wonders in</h1>
-            <h1 class="text-4xl md:text-6xl font-bold text-[#41A4FF]">
-              Sri Lanka
+            <h1 class="text-4xl md:text-4xl font-bold">Explore</h1>
+            <h1 class="text-4xl md:text-4xl font-bold">the Wonders in</h1>
+            <h1 class="text-4xl md:text-5xl font-bold text-red-500">
+              Madhya Pradesh
             </h1>
             <p class="mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Explore Madhya Pradesh effortlessly with FlyOla air taxis for quick, convenient travel. Enjoy safe and comfortable journeys to stunning destinations across the state.
             </p>
             <button className="bg-black text-white px-2 py-3 rounded-lg hover:bg-white hover:border hover:text-black hover:font-bold mt-4">
               Get started
@@ -21,7 +20,7 @@ const Hero2 = () => {
           </div>
           <div class="">
             <img
-              src="https://img.freepik.com/premium-photo/palm-tree-jungle-philippines-concept-about-wanderlust-tropical-travels-swinging-river-people-having-fun_186382-1220.jpg?w=1060"
+              src="https://feeds.abplive.com/onecms/images/uploaded-images/2022/10/10/f8650180385e100acabdaacef3d2f3081665364792110369_original.jpg"
               alt="heroimg"
               class="rounded-3xl h-[100%] w-full object-cover"
             />

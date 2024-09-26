@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const UserSchema = new mongoose.Schema(
+const AdminSchema = new mongoose.Schema(
   {
     name: {
       type: String,
@@ -27,13 +27,12 @@ const UserSchema = new mongoose.Schema(
     },
     isAdmin: {
       type: Boolean,
-      default: false,
+      default: true, // Always true for admins
     },
     type: {
       type: String,
       required: true,
-      // enum :["user","admin"],
-      // default : "users"
+      default: "admin", // Explicitly set to admin
     },
     pic: {
       type: String,
@@ -45,4 +44,4 @@ const UserSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("TravelUser", UserSchema);
+module.exports = mongoose.model("AdminUser", AdminSchema);

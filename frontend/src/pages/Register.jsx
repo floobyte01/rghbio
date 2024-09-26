@@ -21,8 +21,14 @@ const Register = () => {
 
   const navigate = useNavigate();
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   navigate('/');
+  // }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+  
     const result = await Swal.fire({
       title: "Do You want to signup with Travely?",
       showDenyButton: true,
@@ -30,7 +36,8 @@ const Register = () => {
       confirmButtonText: "Save",
       denyButtonText: `Don't save`,
     });
-
+  
+    // Validations (same as before)
     if (password !== repeatPassword) {
       Swal.fire({
         icon: "error",
@@ -63,16 +70,16 @@ const Register = () => {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "password must at least have 6 charaters",
+        text: "password must at least have 6 characters",
       });
       return;
     }
-
+  
     setLoading2(true);
-
+  
     try {
       const existingUser = await axios.get(`auth/check-email?email=${email}`);
-
+  
       if (existingUser.data.message === "Email already exists") {
         Swal.fire({
           icon: "error",
@@ -82,72 +89,67 @@ const Register = () => {
         setLoading2(false);
         return;
       }
-
+  
       const data = new FormData();
       data.append("file", file);
       data.append("upload_preset", "upload");
-
+  
+      let imgUrl = "";
       if (file) {
         const uploadRes = await axios.post(
           "https://api.cloudinary.com/v1_1/dpgelkpd4/image/upload",
           data
         );
-
-        const { url } = uploadRes.data;
-
-        const response = await axios.post("auth/register", {
-          name,
-          email,
-          mobile,
-          country,
-          type,
-          password,
-          img: url,
-        });
-
-        Swal.fire(
-          "Congratulations! You Have Successfully Registered with Travely",
-          "",
-          "success"
-        );
-        navigate("/login");
-      } else {
-        const response = await axios.post("auth/register", {
-          name,
-          email,
-          mobile,
-          country,
-          type,
-          password,
-        });
-
-        Swal.fire(
-          "Congratulations! You Have Successfully Registered with Travely",
-          "",
-          "success"
-        );
-        navigate("/login");
+        imgUrl = uploadRes.data.url;
       }
-
+  
+      const response = await axios.post("auth/register", {
+        name,
+        email,
+        mobile,
+        country,
+        type,
+        password,
+        img: imgUrl,
+      });
+  
+      // Now automatically sign in the user by saving the token in localStorage/sessionStorage
+      const { token, user } = response.data; // Assuming the API returns a token and user info
+  
+      // Save token to localStorage
+      localStorage.setItem("authToken", token);
+      localStorage.setItem("user", JSON.stringify(user)); // Optional: save user info
+  
+      Swal.fire(
+        "Congratulations! You Have Successfully Registered with Travely",
+        "",
+        "success"
+      );
+  
+      // Redirect to home page after signing in automatically
+      navigate("/");
+  
       setLoading2(false);
     } catch (err) {
-      if (err.message === "Request failed with status code 409") {
+      if (err.response && err.response.status === 409) {
         Swal.fire({
           icon: "error",
           title: "Oops...",
           text: "User with this email already exists!",
         });
-        setLoading2(false);
-        return;
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: err.message,
+        });
       }
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: err.message,
-      });
       setLoading2(false);
     }
   };
+  
+  
+
 
   return (
     <div

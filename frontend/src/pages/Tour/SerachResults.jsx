@@ -21,6 +21,7 @@ const SerachResults = () => {
     const getTours = async () => {
       try {
         const response = await axios.get("/tours");
+        console.log({response})
         const tours = response.data.filter((tour) => {
           return (
             tour.cities.split(",").includes(destination) ||

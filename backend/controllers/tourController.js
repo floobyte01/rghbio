@@ -6,6 +6,7 @@ const createTour = async (req, res) => {
   try {
     const newTour = new Tour(req.body);
     const savedTour = await newTour.save();
+    console.log(savedTour);
     res.status(200).json({
       status: "Success",
       message: "Tour Adding successfull",
@@ -40,7 +41,7 @@ const getAllTours = async (req, res) => {
 const getTour = async (req, res) => {
   try {
     const uID = req.params.id;
-
+    // console.log(uID);
     const oneTour = await Tour.findById(uID);
     res.status(200).json({
       status: "Success",

@@ -5,6 +5,8 @@ import axios from "axios";
 
 const ServiceCard = () => {
   const [allTours, setTour] = useState([]);
+ 
+
   useEffect(() => {
     const getTours = async () => {
       try {
@@ -63,6 +65,7 @@ const ServiceCard = () => {
                 onClick={console.log(tours._id)}
               >
                 <Link to={`/tours/${tours._id}`}>View Details</Link>
+                {/* <Link to={`/tours/viewDetails`}>View Details</Link> */}
               </button>
             </div>
           </div>

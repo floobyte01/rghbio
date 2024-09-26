@@ -4,7 +4,7 @@ const createForm = async (req, res) => {
   try {
     const newForm = new customForm(req.body);
     const savedForm = await newForm.save();
-
+    console.log(savedForm) 
     res.status(200).json({
       status: "success",
       message: "Details Saved! Our Agent will contact you",

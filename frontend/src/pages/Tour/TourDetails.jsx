@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import HeroTour from "./HeroTour";
 import TourNav from "../../components/navbar/TourNav";
 import { AiFillStar } from "react-icons/ai";
@@ -18,6 +18,8 @@ const TourDetails = () => {
   const [date, setDate] = useState("");
   const [phone, setPhone] = useState(0);
   const [guestCount, setGuests] = useState("");
+  const [isSigned, setSigned] = useState(false);
+  const navigate = useNavigate();
 
   const [allTours, setTour] = useState([]);
   useEffect(() => {
@@ -34,12 +36,13 @@ const TourDetails = () => {
     initTE({ Stepper, initTE, Ripple, Input, Datepicker });
   }, [id]);
   //get email of current user
-  const { user } = useContext(AuthContext);
-  const currentUser = user.email;
-
+  // const { user } = useContext(AuthContext);
+  // const currentUser = user.email;
+  // console.log(currentUser);
+  
+  
   const inputHandler = async (e) => {
     e.preventDefault();
-
     if (
       firstName === "" ||
       lastName === "" ||
@@ -73,7 +76,7 @@ const TourDetails = () => {
       return;
     }
     const tourReservation = {
-      currentUser,
+      // currentUser,
       firstName,
       lastName,
       date,
@@ -106,7 +109,16 @@ const TourDetails = () => {
         text: err.message,
       });
     }
+     setSigned(false);
+     console.log("Hare Krishna");
+     console.log({isSigned});
   };
+
+
+  const bookHandler = () => {
+    navigate('/login');
+    setSigned(true);
+  }
 
   return (
     <div>
@@ -134,7 +146,7 @@ const TourDetails = () => {
           <div>
             <p className="text-3xl font-bold mb-6  text-gray-500">Ranking</p>
             <div className="flex flex-row mr-2 space-x-2">
-              <p className="text-2xl mb-6">{}</p>
+              <p className="text-2xl mb-6">{ }</p>
               <AiFillStar className="text-3xl text-yellow-500 " />
             </div>
           </div>
@@ -217,6 +229,7 @@ const TourDetails = () => {
                   </svg>
                   Check FAQ
                 </button>
+
               </div>
             </div>
           </div>
@@ -238,7 +251,7 @@ const TourDetails = () => {
                 <div className="flex flex-row-reverse space-x-2 float-right pt-3 ">
                   {/* <p className="text-lg">({reviews.length} Reviews)</p> */}
                   <AiFillStar className="text-2xl text-yellow-500 " />
-                  <p className="text-lg mb-6">{}</p>
+                  <p className="text-lg mb-6">{ }</p>
                 </div>
               </div>
 
@@ -375,7 +388,14 @@ const TourDetails = () => {
                       class="inline-block w-full rounded-xl bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
                       data-te-ripple-init
                       data-te-ripple-color="light"
-                      onClick={inputHandler}
+                      onClick = {() => {
+                        if(isSigned){
+                          inputHandler();
+                        }else{
+                          bookHandler();
+                        }
+                      }}
+                    // onClick={bookHandler}
                     >
                       Book Now
                     </button>

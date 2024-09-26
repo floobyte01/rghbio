@@ -2,9 +2,10 @@ const tourReserve = require("../models/tourBook");
 
 const bookTour = async (req, res) => {
   try {
-    console.log("ava");
+    console.log("Arvind");
     const newRes = new tourReserve(req.body);
     const saveRes = await newRes.save();
+    console.log(saveRes);
 
     res.status(200).json({
       status: "Success",

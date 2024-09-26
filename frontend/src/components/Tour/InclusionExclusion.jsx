@@ -9,7 +9,7 @@ const InclusionExclusion = () => {
   console.log(tour);
 
   const { inclusions, exclusions } = tour;
-  console.log(inclusions);
+  // console.log(inclusions);
   return (
     <div>
       {" "}

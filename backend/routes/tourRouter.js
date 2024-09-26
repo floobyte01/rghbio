@@ -18,6 +18,10 @@ router
   .patch(tourController.updateTour)
   .delete(tourController.deleteTour);
 
+  // new line updated
+router
+// .route("/tourDetails").get(tourController.getTour)  
+
 //custom form
 router.route("/customform").post(tourCustomForm.createForm);
 

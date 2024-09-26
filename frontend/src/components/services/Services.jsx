@@ -39,7 +39,7 @@ const Services = () => {
           <div class="-mx-4 flex flex-wrap">
             <div class="w-full px-4">
               <div class="mx-auto mb-12 max-w-[510px] text-center lg:mb-20">
-                <span class="text-primary mb-2 block text-lg font-semibold">
+                <span class="text-red-500 mb-2 block text-lg font-semibold">
                   Our Services
                 </span>
                 <h2 class="text-dark mb-4 text-3xl font-bold sm:text-4xl md:text-[40px]">

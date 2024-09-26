@@ -6,6 +6,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const colors = require("colors");
 const userRoutes = require("./routes/userRoutes");
+const adminRoutes = require("./routes/adminRoutes.js");
 const messageRoutes = require("./routes/messageRoutes");
 const chatRoutes = require("./routes/chatRoutes");
 
@@ -34,6 +35,7 @@ app.use(cookieParser());
 //isuru
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/users", require("./routes/userRoutes"));
+app.use("/api/admin", require("./routes/adminRoutes.js"));
 
 //ishara
 const tourRouter = require("./routes/tourRouter");
@@ -114,6 +116,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/message", messageRoutes);
 app.use("/api/user", userRoutes);
+app.use("/api/admin", adminRoutes);
 app.use("/api/chat", chatRoutes);
 
 /*app.get('/api/chat/:id',(req,res) =>{
