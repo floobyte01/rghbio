@@ -92,7 +92,7 @@ const resetpasswordrequest = async (req, res) => {
     }
 
     const token = generateToken({ userId: user._id });
-    const resetLink = `http://localhost:3000/reset-password?token=${token}`;
+    const resetLink = `https://lucky-backend.onrender.com/reset-password?token=${token}`;
 
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({

@@ -10,11 +10,9 @@ const Footer = () => {
   return (
     <div className="w-full bg-black py-16 px-10 grid md:grid-cols-2 gap-8 text-gray-300 bottom-0">
       <div className="">
-        <h3 className="text-2xl font-bold text-red-500">Travely</h3>
+      <img src="/logo/Lucky2.png" className="h-14 w-14 relative ml-24 rounded-md " />
         <p className="py-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio non
-          nemo veniam, natus accusantium. Praesentium, doloribus mollitia
-          dignissimos similique optio
+        Ujjain also boasts a rich cultural heritage, with ancient astronomical sites like the Vedh Shala, constructed by Raja Jai Singh for celestial observations.
         </p>
         <div className="flex justify-start gap-10 md:w-[75%] my-6">
           <FaWhatsappSquare size={30} />

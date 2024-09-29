@@ -3,7 +3,7 @@ import SearchBar from "./SearchBar";
 
 const image = {
   backgroundImage:
-    "url('https://firebasestorage.googleapis.com/v0/b/travely-7264c.appspot.com/o/header%20photo.jpg?alt=media&token=81dbb6a1-7b18-473d-a151-dbe0a59e8bb7')",
+    "url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/50/26/f1/boating-area.jpg?w=1200&h=1200&s=1')",
   height: "500px",
   backgroundPosition: "50%",
 };
@@ -29,19 +29,26 @@ const HeroTour = () => {
                 Do More With Lucky
               </h2>
               <div>
-                <div className="mt-12 w-1/2 mr-auto ml-auto">
+              <div className="mt-12 w-1/2 mr-auto ml-auto">
                   <h4
-                    class="mt-5 mb-6 text-xl  uppercase animate-bounce text-white text-center"
+                    class="mt-5 mb-6 text-xl uppercase text-center"
                     style={{
                       fontFamily: "Poppins, sans-serif",
-                      fontWeight: "normal",
-                      border: "solid 1px  white",
-                      textShadow: "3px 1px black",
+                      fontWeight: "600",
+                      border: "solid 2px white",
+                      borderRadius: "10px",
+                      padding: "10px",
+                      backgroundColor: "rgba(0, 0, 0, 0.5)",
+                      color: "#ff5252",
+                      textShadow: "3px 3px 0 #000, 6px 6px 5px rgba(0,0,0,0.2)",
+                      letterSpacing: "2px",
+                      lineHeight: "1.4",
                     }}
                   >
-                    an island awaits you <br />
-                    Discover sri Lanka
+                    An Island Awaits You <br />
+                    Discover Madhya Pradesh
                   </h4>
+
                 </div>
               </div>
               <SearchBar />

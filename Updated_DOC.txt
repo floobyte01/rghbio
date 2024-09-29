@@ -1,0 +1,60 @@
+1. Images : use multer 
+2. Hotel :  not 
+3. SerachResults.jsx : use Firebase
+4.Tour Packages/ where u wanna to go is working : it is working
+4.1 Tour Packages/ Type a Destination : not working -> component name :  SerachResults
+4.2Tour Packages/ Tour Categories : fixed the continue mounting 
+5. Vehicle : it not working properly
+6.FInd : pages/Tour/Admin: url: http://localhost:3000/tours 
+7.Train Ticket: http://localhost:3000/TrainHome
+8.Cloudinary use
+
+
+
+*Work We have to do : Alert(PopUp), Otp by using whatshup/gamil, Calender look attractive, Google Analytics
+
+
+Date: 23/09/2024: 
+1. DPC_backend repository
+2. When user click on book then rendor to signUp page
+3. Home page: Ujjain related images - Done
+4.Madhya Pradesh Tourism
+5.View Details without authentication : Done(Tour/TourDetails : comment the useContext(AuthContext)
+6.When we will click on book then we will redirect on replace(signUp == signIn) page: (Tour/TourDetails)
+7.When click on book button from tour package page then 
+8.tour package -> press book button -> if already loggedin or user already loggedIn then create a popUP ("resevation successfull") else signIn  
+
+Date: 24/09/2024: 
+
+1.When we will click on book then we will redirect on replace(signUp == signIn) page: Done(Tour/TourDetails)
+2.dpccollege.com
+admin.dpccollege.com
+
+3.I have face -> Uncaught SyntaxError: "undefined" is not valid JSON
+4. JsonWebTokenError: invalid signature
+    at D:\Arvind-Task\backend\node_modules\jsonwebtoken\verify.js:171:19
+
+5. Travers
+Date: 26/09/2024: 
+1.images and colors changes 
+2.and deploying in progress
+3.Problem in option: http://localhost:3000/events
+
+
+Date: 27/09/2024:
+1.Backend Deployment : done
+2. "proxy": "https://lucky-backend.onrender.com/api/" replace with https://lucky-backend.onrender.com
+3.Deploy source: https://youtu.be/AslMb_MQzDo?si=OoGWcUk7h_vKNI5X
+4. npm audit fix -> npm audit --force
+
+Date: 28/09/2024:
+1.does not provide an export named 'Datepicker - not done
+2.import { FontAwesomeIcon } from "@fortawesome/fontawesome-free - not fixed
+3.Deprecation Warning: The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0. 
+4.Proxy error: Could not proxy request /auth/login from localhost:3000 to https://lucky-backend.onrender.com/api/ (ECONNREFUSED).
+5. we have replace the http://localhost:3000 to https://lucky-backend.onrender.com
+
+Date: 29/09/2024:
+1.color remove
+2.red color se related
+3.background remover

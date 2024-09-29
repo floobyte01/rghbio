@@ -28,7 +28,7 @@ const HotelOverview = () => {
             </h1>
         <div className="flex justify-center items-center w-full flex-col lg:flex-row pt-12 lg:pt-0">
           <img
-            src={`http://localhost:5000/api/hotels/images/${data.HotelImg}`}
+            src={`https://lucky-backend.onrender.com/api/hotels/images/${data.HotelImg}`}
             alt="Hotel Image"
             className=" w-[320px] md:w-[700px]  lg:w-[800px] rounded-lg mb-10"
           />
@@ -49,7 +49,7 @@ const HotelOverview = () => {
             
 
             <div className="flex flex-col md:flex-row py-4">
-              <h1 className="text-[#41A4FF]">Free Cancellation available</h1>
+              <h1 className="text-red-500">Free Cancellation available</h1>
             </div>
 
             <div className="flex flex-col md:flex-row py-4">
@@ -81,7 +81,7 @@ const HotelOverview = () => {
   {data.HotelImgs &&
     data.HotelImgs.map((image, index) => (
       <img
-        src={`http://localhost:5000/api/hotels/images/${image}`}
+        src={`https://lucky-backend.onrender.com/api/hotels/images/${image}`}
         alt={`Hotel Image ${index}`}
         key={index}
         class="ml-10 w-64 h-64 rounded-lg mb-2"

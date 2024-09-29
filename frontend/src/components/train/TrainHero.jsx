@@ -10,9 +10,7 @@ const TrainHero = ()=>{
             <h2 className='text-3xl md:text-5xl  font-extrabold uppercase  text-[#41A4FF]'>
                 Easily Book your<br/>Train Tickets online<br/>with 
             </h2>
-            <h1 className='text-3xl md:text-5xl font-extrabold uppercase text-[#DEEFFF] py-4'>
-                Travely
-            </h1>
+            <img src="/logo/Lucky2.png" className="h-14 w-14 rounded-md " />
             <p className='text-sm md:text-1xl  lg:max-w-[580px] md:max-w-[900px] text-justify'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet dui pulvinar, volutpat turpis vel, elementum odio. Vestibulum ac fringilla enim, ac aliquet ligula. Nunc aliquam sodales blandit. Praesent eu ligula id nisl suscipit iaculis vel sed urna. Donec id nulla luctus, interdum dolor quis, cursus ligula.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet dui pulvinar, volutpat turpis vel, elementum odio.</p>
         </div>        
     </div> 

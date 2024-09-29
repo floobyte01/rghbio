@@ -15,14 +15,10 @@ const Hero3 = () => {
                   TAKE ONLY MEMORIES, LEAVE ONLY FOOTPRINTS
                 </h2>
                 <p className="text-body-color mb-8 text-base">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse
-                  nulla enim aperiam culpa cupiditate quas animi ducimus
-                  blanditiis! Dolorum, perspiciatis.
+                Ujjain, a historic city in Madhya Pradesh, India, is one of the seven sacred cities in Hinduism. It is renowned for the Mahakaleshwar Temple, dedicated to Lord Shiva, and is a key location for the Kumbh Mela, one of the largest religious gatherings
                 </p>
                 <p className="text-body-color mb-12 text-base">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse
-                  nulla enim aperiam culpa cupiditate quas animi ducimus
-                  blanditiis! Dolorum, perspiciatis.
+                Ujjain also boasts a rich cultural heritage, with ancient astronomical sites like the Vedh Shala, constructed by Raja Jai Singh for celestial observations.
                 </p>
               </div>
             </div>

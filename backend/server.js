@@ -136,7 +136,7 @@ const server = app.listen(port, () =>
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    orgin: "http://localhost:3000",
+    orgin: "https://lucky-backend.onrender.com",
   },
 });
 

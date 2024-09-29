@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "proxy": "http://localhost:5000/api/",
+  "proxy": "https://lucky-backend.onrender.com/api/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",

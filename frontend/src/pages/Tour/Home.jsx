@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import { AiOutlineRight } from "react-icons/ai";
 import CustomForm from "./Services/CustomForm";
 
-import welcome from "../../assets/Tour/Tour-Welcome.jpg";
+import welcome from "../../assets/Tour/Tour-Welcome.png";
 
 const Home = () => {
   return (
@@ -23,7 +23,7 @@ const Home = () => {
           <li>
             <Link
               to={"/"}
-              class="text-primary transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 active:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500 dark:active:text-primary-600"
+              class="text-red-500 transition duration-150 ease-in-out hover:text-red-600 focus:text-red-600 active:text-red-700 dark:text-red-400 dark:hover:text-red-500 dark:focus:text-red-500 dark:active:text-red-600"
             >
               Home
             </Link>
@@ -34,7 +34,7 @@ const Home = () => {
           <li>
             <Link
               to={"#"}
-              class="text-primary transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 active:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500 dark:active:text-primary-600"
+              class="text-red-500 transition duration-150 ease-in-out hover:text-red-600 focus:text-red-600 active:text-red-700 dark:text-red-400 dark:hover:text-red-500 dark:focus:text-red-500 dark:active:text-red-600"
             >
               Tour Packages
             </Link>
@@ -43,7 +43,7 @@ const Home = () => {
             <AiOutlineRight className="mt-1 mx-2" />
           </li>
           <li class="text-neutral-500 dark:text-neutral-400">
-            Explore Sri Lanka
+            Explore Madhya Pradesh
           </li>
         </ol>
       </nav>
@@ -55,7 +55,7 @@ const Home = () => {
       {/* Categories */}
       <div className="mx-auto max-w-2xl px-4  sm:px-6  lg:max-w-7xl lg:px-8">
         {/* welcome image */}
-        <img src={welcome} alt="" />
+        <img src={welcome} alt=""  className="w-full h-[80vh]"/>
         <h1 className="text-4xl mt-10 mb-10 ml-2">Tour Categories</h1>
         <TourCategories />
       </div>
@@ -68,7 +68,7 @@ const Home = () => {
             type="button"
             data-te-ripple-init
             data-te-ripple-color="light"
-            class="mt-20 inline-block rounded-xl bg-primary px-6 pb-2 pt-2.5 text-3xl font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+            class="mt-20 inline-block rounded-xl bg-red px-6 pb-2 pt-2.5 text-3xl font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-red-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-red-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-red-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
           >
             <Link to={"/tourdetails"}></Link>
             View More

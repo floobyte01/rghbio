@@ -5,7 +5,7 @@ import { Menu } from "@headlessui/react";
 const nav_links = [
   {
     path: "/tours/home",
-    display: "Explore SriLanka",
+    display: "Explore Madhya Pradesh",
   },
   {
     path: "/sunandbeach",
@@ -72,7 +72,7 @@ const TourNav = () => {
                     <Menu>
                       {
                         <Link
-                          className=" hover:bg-[#41A4FF] hover:text-white px-3 py-5 rounded-lg"
+                          className=" hover:bg-red-500 hover:text-white px-3 py-5 rounded-lg"
                           to={item.path}
                         >
                           {item.display}

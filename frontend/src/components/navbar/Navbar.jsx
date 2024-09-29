@@ -58,9 +58,7 @@ const Navbar = () => {
 
   return (
     <nav className="flex justify-around w-full py-4 bg-gray-50 sticky top-0 z-[999]">
-      <div className="flex items-center">
-        <h3 className="text-2xl font-bold text-red-500">Lucky</h3>
-      </div>
+      <img src="/logo/Lucky2.png" className="h-14 w-14 rounded-md " />
       {/* <!-- left header section --> */}
       <div className="items-center hidden space-x-5 md:flex">
         <Link to="/">Home</Link>

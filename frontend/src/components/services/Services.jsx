@@ -46,8 +46,7 @@ const Services = () => {
                   What We Offer
                 </h2>
                 <p class="text-body-color text-base">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Quaerat reprehenderit autem ea ab repellat eum, quasi modi,
+                Madhya Pradesh offers a rich tapestry of famous places, including the ancient temples of Khajuraho, known for their intricate sculptures, and the wildlife-rich Kanha National Park. The majestic forts of Gwalior and the spiritual city of Ujjain, home to the revered Mahakaleshwar Temple, are also key attractions in the state.
                 </p>
               </div>
             </div>

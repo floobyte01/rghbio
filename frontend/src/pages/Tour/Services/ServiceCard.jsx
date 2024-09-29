@@ -55,7 +55,7 @@ const ServiceCard = () => {
             </div>
             <div className="flex flex-row mr-2 space-x-3 justify-between">
               <p className="text-sm text-left p-2 font-bold">
-                From ${tours.price}
+                From ₹{tours.price}
               </p>
               <button
                 type="button"
